@@ -166,3 +166,46 @@ iframe {
     transition: 0.3s;
     font-weight: bold;
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE STYLES (For Phones/Tablets)
+   ========================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Kill the giant side margins */
+    .spacing {
+        margin: 20px 5%; /* Switch to 5% safety padding on the sides instead of 220px */
+    }
+
+    /* 2. Remove the heavy side bands so they don't block content */
+    .left_band, .right_band {
+        display: none; /* Hides the decorative 100px side bands on mobile */
+    }
+
+    /* 3. Un-fix UI elements so they flow naturally instead of overlapping text */
+    .logo, .bottom, .back_btn {
+        position: static;   /* Returns them to normal document flow */
+        display: block;
+        margin: 20px auto;  /* Centers them nicely with vertical spacing */
+        text-align: center;
+    }
+    
+    .back_btn {
+        width: 100px;       /* Give the back button a bit more finger room to tap */
+        padding: 8px 0;
+    }
+
+    /* 4. Force your flex containers to stack vertically instead of squeezing side-by-side */
+    .card-container, .navbar-container {
+        flex-direction: column; /* Changes row to column */
+        align-items: center;    /* Centers the items vertically */
+    }
+
+    /* 5. Make cards and navbars safely responsive */
+    .card, .navbar {
+        width: 100%;        /* Allows them to fill the screen width safely */
+        max-width: 320px;   /* ...but stops them from stretching out too wide on small tablets */
+    }
+}
+
+
