@@ -167,6 +167,14 @@ iframe {
     font-weight: bold;
 }
 
+/* Ensure the link wrappers behave like blocks and scale nicely */
+.card-container a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
 /* ==========================================
    MOBILE RESPONSIVE STYLES (For Phones/Tablets)
    ========================================== */
